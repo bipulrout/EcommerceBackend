@@ -1,0 +1,7 @@
+const updateProduct = await productModel
+       .findByIdAndUpdate(req.params.id, req.body, {returnDocument: "after"});
+
+       res.status(200).json({
+        message: "Product updated successfully",
+        updateProduct
+       })
